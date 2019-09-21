@@ -10,7 +10,12 @@ class App extends React.Component {
 
     this.state = {
       characters: [],
-      findCharacter: '',
+      genderOptions: [], 
+      houseOptions: [], 
+      name: '',
+      house: '',
+      gender: '',
+
     }
 
     this.searchCharacter = this.searchCharacter.bind(this);
@@ -19,30 +24,45 @@ class App extends React.Component {
   componentDidMount() {
     fetchCharacters()
     .then(characters => {
+      const genderOptions = characters.reduce((acc, character) => {
+        if(acc.findIndex(gender => gender === character.gender) === -1) {
+          acc.push(character.gender)
+        }
+        return acc
+      }, []);
+      const houseOptions = characters.reduce((acc, character) => {
+        if(character.house && acc.findIndex(house => house === character.house) === -1) {
+          acc.push(character.house)
+        }
+        return acc
+      }, []);
       this.setState({
-        characters: characters
+        characters: characters,
+        genderOptions: genderOptions,
+        houseOptions: houseOptions
       })
     })
   }
 
   searchCharacter(event) {
-    const findCharacter = event.currentTarget.value;
-    console.log(fetchCharacters);
+    const value = event.currentTarget.value;
+    const id = event.currentTarget.id;
+
     this.setState({
-      findCharacter: findCharacter
+      [id] : value
     })
   }
 
   render() {
-    const { characters, findCharacter} = this.state
+    const { characters, house, name, gender, genderOptions, houseOptions} = this.state
     return (
       <div className="App">
         <header className="header" >
           <h1 className="header__title" >Personajes de Harry Potter</h1>
         </header>
         <main className="main" >
-          <Search searchCharacter={this.searchCharacter} findCharacter={findCharacter} />
-          <CharactersList characters={characters} findCharacter={findCharacter} />
+          <Search searchCharacter={this.searchCharacter} genderOptions={genderOptions} houseOptions={houseOptions} />
+          <CharactersList characters={characters} name={name} house={house} gender={gender} />
         </main>
       </div>
     );
