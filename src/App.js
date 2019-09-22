@@ -3,6 +3,8 @@ import './App.css';
 import { fetchCharacters } from './services/fetchCharacters';
 import Search from './components/Search';
 import CharactersList from './components/CharactersList';
+import CharacterDetails from './components/CharacterDetails';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -61,8 +63,19 @@ class App extends React.Component {
           <h1 className="header__title" >Personajes de Harry Potter</h1>
         </header>
         <main className="main" >
-          <Search searchCharacter={this.searchCharacter} genderOptions={genderOptions} houseOptions={houseOptions} />
-          <CharactersList characters={characters} name={name} house={house} gender={gender} />
+          <Switch>
+              <Route 
+              exact path="/"  
+              render={routerProps => (
+                <React.Fragment>
+                  <Search match={routerProps.match} searchCharacter={this.searchCharacter} genderOptions={genderOptions} houseOptions={houseOptions} />
+                  <CharactersList match={routerProps.match} characters={characters} name={name} house={house} gender={gender}/>
+                </React.Fragment>
+                )} 
+                />
+            <CharacterDetails Route path="/Details"/>
+          </Switch>
+
         </main>
       </div>
     );
