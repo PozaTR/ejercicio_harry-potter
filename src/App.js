@@ -17,7 +17,6 @@ class App extends React.Component {
       name: '',
       house: '',
       gender: '',
-
     }
 
     this.searchCharacter = this.searchCharacter.bind(this);
@@ -26,6 +25,10 @@ class App extends React.Component {
   componentDidMount() {
     fetchCharacters()
     .then(characters => {
+      const mappedCharacters = characters.map((character, index) => ({
+        id: index,
+        ...character
+      }) )
       const genderOptions = characters.reduce((acc, character) => {
         if(acc.findIndex(gender => gender === character.gender) === -1) {
           acc.push(character.gender)
@@ -39,7 +42,7 @@ class App extends React.Component {
         return acc
       }, []);
       this.setState({
-        characters: characters,
+        characters: mappedCharacters,
         genderOptions: genderOptions,
         houseOptions: houseOptions
       })
@@ -73,7 +76,12 @@ class App extends React.Component {
                 </React.Fragment>
                 )} 
                 />
-            <CharacterDetails Route path="/Details"/>
+                <Route
+                path="/details/:characterId"
+                render={routerProps =>  (
+                  <CharacterDetails match={routerProps.match} characters={characters} />
+                )}
+                />
           </Switch>
 
         </main>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardCharacter } from './CardCharacter';
+import { Link } from 'react-router-dom';
 
 class CharactersList extends React.Component {
     render() {
@@ -13,7 +14,9 @@ class CharactersList extends React.Component {
               .filter(mygender => !gender || mygender.gender === gender)
               .map((character, index) => 
               <li className="main__character" key={index}>
-                <CardCharacter character={character}/>
+                <Link to={`/details/${character.id}`}>
+                  <CardCharacter character={character}/>  
+                </Link>
               </li>
               )}
             </ul>
