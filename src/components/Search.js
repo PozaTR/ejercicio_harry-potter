@@ -7,12 +7,12 @@ class Search extends React.Component {
         return(
             <div className="search__container" >
               <div>
-                <label htmlFor="name">Busca tu personaje favorito</label>
-                <input className="search__input" id="name" type="text" name="name"  onChange={searchCharacter} value={findCharacter} />
+                <label className="search__labels" htmlFor="name">Busca tu personaje favorito</label>
+                <input className="search__inputs" id="name" type="text" name="name"  onChange={searchCharacter} value={findCharacter} />
               </div>
                 <div className="select__container__house" >
-                  <label htmlFor="house" >Casa</label>
-                  <select className="search__input" id="house" onChange={searchCharacter}>
+                  <label className="search__labels" htmlFor="house" >Casa</label>
+                  <select className="search__inputs" id="house" onChange={searchCharacter}>
                     <option value="" >Todas</option>
                     {houseOptions.map((houseOption, index) => 
                       <option key={index} value={houseOption} >{houseOption}</option>
@@ -20,8 +20,8 @@ class Search extends React.Component {
                   </select>
                 </div>
                 <div className="select__container__gender" >
-                  <label htmlFor="gender" >Género</label>
-                  <select className="search__input" id="gender" onChange={searchCharacter}>
+                  <label className="search__labels" htmlFor="gender" >Género</label>
+                  <select className="search__inputs" id="gender" onChange={searchCharacter}>
                     <option value="" >Ambos</option>
                     {genderOptions.map((genderOption, index) =>
                       <option key={index} value={genderOption} >{genderOption}</option>

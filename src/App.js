@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
     const { characters, house, name, gender, genderOptions, houseOptions} = this.state
     return (
-      <div className="App">
+      <div className="app">
         <header className="header" >
           <h1 className="header__title" >Personajes de Harry Potter</h1>
           <img className="header__logo" src={logo} alt="logo Harry Potter" />
