@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/characterList.scss';
 import { CardCharacter } from './CardCharacter';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +15,7 @@ class CharactersList extends React.Component {
               .filter(mygender => !gender || mygender.gender === gender)
               .map((character, index) => 
               <li className="main__character" key={index}>
-                <Link to={`/details/${character.id}`}>
+                <Link to={`/details/${character.id}`} className="main__character__link" >
                   <CardCharacter character={character}/>  
                 </Link>
               </li>
