@@ -1,12 +1,12 @@
 .main__list {
   display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
   justify-items: stretch;
   list-style: none;
   padding: 32px;
 
   @media all and (min-width: 768px) {
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
