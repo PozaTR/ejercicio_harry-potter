@@ -1,5 +1,6 @@
 .main__list {
   display: grid;
+  justify-items: stretch;
   list-style: none;
   padding: 32px;
 
@@ -17,5 +18,7 @@
 }
 
 .main__character__link {
+  display: block;
+  height: 100%;
   text-decoration: none;
 }
