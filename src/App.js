@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/app.scss';
+import logo from './images/logo-harry-potter.png';
 import { fetchCharacters } from './services/fetchCharacters';
 import Search from './components/Search';
 import CharactersList from './components/CharactersList';
@@ -64,6 +65,7 @@ class App extends React.Component {
       <div className="App">
         <header className="header" >
           <h1 className="header__title" >Personajes de Harry Potter</h1>
+          <img className="header__logo" src={logo} alt="logo Harry Potter" />
         </header>
         <main className="main" >
           <Switch>

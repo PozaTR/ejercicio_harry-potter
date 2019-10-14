@@ -1,0 +1,14 @@
+.header {
+    text-align: center;
+    padding: 42px;
+  
+    &__title {
+      height: 1px;
+      overflow: hidden;
+    }
+    
+    &__logo {
+      max-width:70vw;
+      width: 400px;
+    }
+  }
