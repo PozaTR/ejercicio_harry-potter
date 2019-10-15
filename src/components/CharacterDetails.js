@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/characterDetails.scss';
 import { Link } from 'react-router-dom';
 
 const  CharacterDetails = props =>  {
@@ -17,16 +18,20 @@ const  CharacterDetails = props =>  {
 
       return(
         <React.Fragment>
-          <div className="details__container" >
-            <h2>{name}</h2>
-            <p>{actor}</p>
+          <div className="details" >
             <div>
-              <img src={image} alt={name}></img>
+              <h2 className="details__name">{name}</h2>
+              <p>{actor}</p>
             </div>
-            <p>{house}</p>
-            <p>{species}</p>
-            <p>{dateOfBirth}</p>
-            <p>{ancestry}</p>
+            <div className="details__image-container" >
+                <img className="details__image" src={image} alt={name}></img>
+            </div>
+            <div>
+              <p>{house}</p>
+              <p>{species}</p>
+              <p>{dateOfBirth}</p>
+              <p>{ancestry}</p>
+            </div>
           </div>
           <Link to="/" >Vuelve al listado</Link>
         </React.Fragment>

@@ -1,0 +1,28 @@
+.details {
+  background-color: #4B0E29;
+  border: 1px solid gold;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 12px 24px;
+  text-align: center;
+  width: 300px;
+
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    width: 600px;
+  }
+
+  &__name {
+    padding: 8px;
+  }
+
+  &__image {
+    margin: 24px;
+    width: 200px;
+  }
+}
