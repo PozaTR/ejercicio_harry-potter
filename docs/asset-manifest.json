@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.25724d03.chunk.css",
+    "main.js": "./static/js/main.0afeeea0.chunk.js",
+    "main.js.map": "./static/js/main.0afeeea0.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.3472ae2d.js",
+    "runtime-main.js.map": "./static/js/runtime-main.3472ae2d.js.map",
+    "static/js/2.515f6d28.chunk.js": "./static/js/2.515f6d28.chunk.js",
+    "static/js/2.515f6d28.chunk.js.map": "./static/js/2.515f6d28.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.7b8ce4bb5a9389b3e7b1f70a19dc3bf5.js": "./precache-manifest.7b8ce4bb5a9389b3e7b1f70a19dc3bf5.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.25724d03.chunk.css.map": "./static/css/main.25724d03.chunk.css.map",
+    "static/media/logo-harry-potter.png": "./static/media/logo-harry-potter.1c704747.png"
+  }
+}
