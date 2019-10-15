@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.1d6a6540.chunk.css",
-    "main.js": "./static/js/main.cad72db5.chunk.js",
-    "main.js.map": "./static/js/main.cad72db5.chunk.js.map",
+    "main.css": "./static/css/main.eae46138.chunk.css",
+    "main.js": "./static/js/main.0afeeea0.chunk.js",
+    "main.js.map": "./static/js/main.0afeeea0.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3472ae2d.js",
     "runtime-main.js.map": "./static/js/runtime-main.3472ae2d.js.map",
     "static/js/2.515f6d28.chunk.js": "./static/js/2.515f6d28.chunk.js",
     "static/js/2.515f6d28.chunk.js.map": "./static/js/2.515f6d28.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.40fd22da83e3b00491f980a87ac6b4b1.js": "./precache-manifest.40fd22da83e3b00491f980a87ac6b4b1.js",
+    "precache-manifest.6e8b982ad212d79f1163b3ff18707730.js": "./precache-manifest.6e8b982ad212d79f1163b3ff18707730.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.1d6a6540.chunk.css.map": "./static/css/main.1d6a6540.chunk.css.map",
+    "static/css/main.eae46138.chunk.css.map": "./static/css/main.eae46138.chunk.css.map",
     "static/media/logo-harry-potter.png": "./static/media/logo-harry-potter.1c704747.png"
   }
 }
