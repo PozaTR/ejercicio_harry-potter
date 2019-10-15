@@ -1,4 +1,21 @@
 .details {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+
+  &__link {
+    border: 1px solid  gold;
+    border-radius: 5px;
+    color: #fff;
+    margin: 12px auto;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    width: 300px;
+  }
+}
+
+.detail {
   background-color: #4B0E29;
   border: 1px solid gold;
   border-radius: 5px;
@@ -6,7 +23,7 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 24px;
   padding: 12px 24px;
   text-align: center;
   width: 300px;
@@ -24,5 +41,9 @@
   &__image {
     margin: 24px;
     width: 200px;
+  }
+
+  &__information {
+    text-transform: capitalize;
   }
 }
